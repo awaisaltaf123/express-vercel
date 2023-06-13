@@ -6,7 +6,7 @@ const product = require("./api/product");
 app.use(express.json({ extended: false }));
 
 app.use(cors({
-origin: "https://precor.com"
+origin: "https://cors-anywhere.herokuapp.com"
 }));
 
 app.use("/api/testprecor", product);
