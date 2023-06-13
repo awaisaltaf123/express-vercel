@@ -6,7 +6,9 @@ const product = require("./api/product");
 app.use(express.json({ extended: false }));
 
 // Enable CORS
-app.use(cors());
+app.use(cors({
+origin: 'https://precor.com'
+}));
 
 app.use("/api/testprecor", product);
 
