@@ -7,7 +7,7 @@ app.use(express.json({ extended: false }));
 
 // Enable CORS
 app.use(cors({
-origin: 'https://precor.com'
+  origin: 'https://precor.com'
 }));
 
 app.use("/api/testprecor", product);
