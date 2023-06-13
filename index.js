@@ -6,9 +6,7 @@ const product = require("./api/product");
 app.use(express.json({ extended: false }));
 
 // Enable CORS
-app.use(cors({
-  origin: ['http://express-vercel-tau-three.vercel.app']
-}));
+app.use(cors());
 
 app.use("/api/testprecor", precor);
 
