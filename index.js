@@ -8,7 +8,7 @@ app.use(express.json({ extended: false }));
 // Enable CORS
 app.use(cors());
 
-app.use("/api/testprecor", precor);
+app.use("/api/testprecor", product);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
