@@ -7,7 +7,7 @@ app.use(express.json({ extended: false }));
 
 // Configure CORS
 const corsOptions = {
-  origin: ["null", "https://express-vercel-tau-three.vercel.app"],
+  origin: null,
   methods: ["GET", "POST"],
 };
 
