@@ -5,9 +5,13 @@ const product = require("./api/product");
 
 app.use(express.json({ extended: false }));
 
-app.use(cors({
-origin: "https://cors-anywhere.herokuapp.com"
-}));
+// Configure CORS
+const corsOptions = {
+  origin: ["null", "https://express-vercel-tau-three.vercel.app"],
+  methods: ["GET", "POST"],
+};
+
+app.use(cors(corsOptions));
 
 app.use("/api/testprecor", product);
 
