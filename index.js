@@ -7,7 +7,7 @@ app.use(express.json({ extended: false }));
 
 // Configure CORS
 const corsOptions = {
-  origin: ["null"],
+  origin: "*",
   methods: ["GET"],
 };
 
