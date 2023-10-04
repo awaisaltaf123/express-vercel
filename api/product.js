@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
       console.log(rand);
       res.json({
       status: 200,
-      data:{rand, created, image}
+      data:{ip:rand, created, image}
     });
     }
     else {
