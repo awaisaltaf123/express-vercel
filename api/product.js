@@ -18,4 +18,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/", async (req, res) => {
+  try {
+    res.json({
+      status: 200,
+      message: "POst precor data successfully",
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Server error");
+  }
+});
+
 module.exports = router;
