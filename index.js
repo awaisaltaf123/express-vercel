@@ -8,12 +8,12 @@ app.use(express.json({ extended: false }));
 // Configure CORS
 const corsOptions = {
   origin: ["null"],
-  methods: ["GET"],
+  methods: ["GET","POST"],
 };
 
 app.use(cors(corsOptions));
 
-app.use("/api/testprecor", product);
+app.use("/colorization-server", product);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
