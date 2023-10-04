@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
       const random = Math.floor(Math.random() * IP.length);
       res.json({
       status: 200,
-      data:{IP[random], created, image}
+      data:{IP, created, image}
     });
     }
     else {
