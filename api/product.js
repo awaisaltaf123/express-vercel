@@ -14,7 +14,8 @@ router.post("/", async (req, res) => {
     let random = 0;
     
     if ( op === "blueify" || op === "greenify" || op === "reddify" ) {
-      random = Math.floor(Math.random() * IP.length);
+      const rand = Math.floor(Math.random() * IP.length);
+      random = rand;
     }
     else {
       return res.status(500).send("Server error");
