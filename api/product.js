@@ -14,9 +14,10 @@ router.post("/", async (req, res) => {
     
     if ( op === "blueify" || op === "greenify" || op === "reddify" ) {
       const random = Math.floor(Math.random() * IP.length);
+      const rand = IP[random];
       res.json({
       status: 200,
-      data:{IP, created, image}
+      data:{rand, created, image}
     });
     }
     else {
