@@ -6,11 +6,27 @@ const router = express.Router();
  *
  * @return product list | empty.
  */
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
+    const { op, image} = req.body;
+    let IP;
+    const created = "1696440261212";
+    
+    if ( op === "blueify") {
+      IP = 192.168.1.70;
+    }
+    else if ( op === "greenify") {
+      IP = 192.168.1.71;
+    }
+    else if ( op === "reddify") {
+      IP = 192.168.1.72;
+    }
+    else {
+      return res.status(500).send("Server error");
+    }
     res.json({
       status: 200,
-      message: "Get precor data successfully",
+      data:{IP, created, image}
     });
   } catch (error) {
     console.error(error);
@@ -18,7 +34,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     res.json({
       status: 200,
