@@ -9,24 +9,25 @@ const router = express.Router();
 router.post("/", async (req, res) => {
   try {
     const { op, image} = req.body;
-    let IP;
+    let IP = ['192.168.1.70', '192.168.1.71', '192.168.1.72'];
     const created = "1696440261212";
+    let random;
     
     if ( op === "blueify") {
-      IP = "192.168.1.70";
+      random = Math.floor(Math.random() * IP.length);
     }
     else if ( op === "greenify") {
-      IP = "192.168.1.71";
+      random = Math.floor(Math.random() * IP.length);
     }
     else if ( op === "reddify") {
-      IP = "192.168.1.72";
+      random = Math.floor(Math.random() * IP.length);
     }
     else {
       return res.status(500).send("Server error");
     }
     res.json({
       status: 200,
-      data:{IP, created, image}
+      data:{IP[random], created, image}
     });
   } catch (error) {
     console.error(error);
