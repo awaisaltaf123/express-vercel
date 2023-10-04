@@ -13,13 +13,13 @@ router.post("/", async (req, res) => {
     const created = "1696440261212";
     
     if ( op === "blueify") {
-      IP = 192.168.1.70;
+      IP = "192.168.1.70";
     }
     else if ( op === "greenify") {
-      IP = 192.168.1.71;
+      IP = "192.168.1.71";
     }
     else if ( op === "reddify") {
-      IP = 192.168.1.72;
+      IP = "192.168.1.72";
     }
     else {
       return res.status(500).send("Server error");
