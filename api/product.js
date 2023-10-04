@@ -11,15 +11,9 @@ router.post("/", async (req, res) => {
     const { op, image} = req.body;
     let IP = ['192.168.1.70', '192.168.1.71', '192.168.1.72'];
     const created = "1696440261212";
-    let random;
+    let random = 0;
     
-    if ( op === "blueify") {
-      random = Math.floor(Math.random() * IP.length);
-    }
-    else if ( op === "greenify") {
-      random = Math.floor(Math.random() * IP.length);
-    }
-    else if ( op === "reddify") {
+    if ( op === "blueify" || op === "greenify" || op === "reddify" ) {
       random = Math.floor(Math.random() * IP.length);
     }
     else {
